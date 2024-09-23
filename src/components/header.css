@@ -1,0 +1,22 @@
+.header__container {
+    background: #ffffff;
+    padding: 12px 22px;
+    height: 70px;
+}
+
+.header__card {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__card .header__title h1 {
+    font-size: 19px;
+    color: #333333;
+}
+
+.header__card .header__title p {
+    font-size: 14px;
+    font-weight: 500;
+}
