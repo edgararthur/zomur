@@ -1,81 +1,48 @@
-import './leftsidebar.css'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHouse } from '@fortawesome/free-solid-svg-icons';
-
+import './leftsidebar.css';
 import 'boxicons/css/boxicons.min.css';
 
-function LeftSidebar() {
-  return (
-    <div className='leftbar__container'>
-        <div className="leftbar__card">
-            <div className="logo">
-                <img src="src/assets/logo.png" alt="" />
-            </div>
-            <div className="leftbar__menu">
-                <p>Menu</p>
-                <ul>
-                    <li>
-                        <i className='bx bx-home-alt-2' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Dashboard</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-wallet' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">My Wallet</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-credit-card' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Transaction</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-file' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Order</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-user-circle' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Customers</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-package' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Products</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-message-rounded-detail' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Inbox</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-bell' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">Notifications</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-user' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">User</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-history' style={{ fontSize: '18px', fontWeight: '550' }}></i>
-                        <a href="">History</a>
-                    </li>
-                </ul>
-            </div>
-            <div className="leftbar__help">
-                <p>Help</p>
-                <ul>
-                    <li>
-                        <i className='bx bx-support' ></i>
-                        <a href="">Support</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-cog' ></i>
-                        <a href="">Setting</a>
-                    </li>
-                    <li>
-                        <i className='bx bx-log-out' ></i>
-                        <a href="">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-  )
+function MenuItem({ icon, text, link }: { icon: string, text: string, link: string }) {
+	return (
+		<li>
+			<i className={`bx ${icon}`} style={{ fontSize: '18px', fontWeight: '550' }}></i>
+			<a href={link}>{text}</a>
+		</li>
+	);
 }
 
-export default LeftSidebar
+function LeftSidebar() {
+	return (
+		<div className='leftbar__container'>
+			<div className="leftbar__card">
+				<div className="logo">
+					<img src="src/assets/logo.png" alt="" />
+				</div>
+				<div className="leftbar__menu">
+					<p>Menu</p>
+					<ul>
+						<MenuItem icon='bx-home-alt-2' text='Dashboard' link='' />
+						<MenuItem icon='bx-wallet' text='My Wallet' link='' />
+						<MenuItem icon='bx-credit-card' text='Transaction' link='' />
+						<MenuItem icon='bx-file' text='Order' link='' />
+						<MenuItem icon='bx-user-circle' text='Customers' link='' />
+						<MenuItem icon='bx-package' text='Products' link='' />
+						<MenuItem icon='bx-message-rounded-detail' text='Inbox' link='' />
+						<MenuItem icon='bx-bell' text='Notifications' link='' />
+						<MenuItem icon='bx-user' text='User' link='' />
+						<MenuItem icon='bx-history' text='History' link='' />
+					</ul>
+				</div>
+				<div className="leftbar__help">
+					<p>Help</p>
+					<ul>
+						<MenuItem icon='bx-support' text='Support' link='' />
+						<MenuItem icon='bx-cog' text='Setting' link='' />
+						<MenuItem icon='bx-log-out' text='Logout' link='' />
+					</ul>
+				</div>
+			</div>
+		</div>
+  );
+}
+
+export default LeftSidebar;
