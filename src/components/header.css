@@ -20,3 +20,65 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+.header__card .header__contents {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 23px 0 0;
+}
+
+.header__card .header__contents .search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #f2feff;
+    border-radius: 12px;
+}
+
+.header__card .header__contents .search i {
+    font-size: 18px;
+    color: #999999;
+}
+
+.header__card .header__contents .search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #999999;
+    font-size: 14px;
+    background: transparent;
+}
+
+.header__card .header__contents .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header__card .header__contents .header__actions i {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    color: #999999;
+    font-size: 26px;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #abf1ff;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.header__card .header__contents .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+}
+
+.header__card .header__contents .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
