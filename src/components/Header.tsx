@@ -10,10 +10,14 @@ function Header() {
 				</div>
 				<div className="header__contents">
 					<div className="search">
-						<input type="search" name="search" placeholder='Search Dashboard' id="" />
+						<i className="bx bx-search-alt-2"></i>
+						<input type="search" name="search" placeholder='Search Dashboard...' id="" />
+						<i className='bx bx-slider-alt'></i>
 					</div>
 					<div className="header__actions">
-						<i className="fas fa-message"></i>
+						<i className='bx bx-chat' style={{ fontSize: '18px' }}></i>
+						<i className='bx bx-bell' style={{ fontSize: '18px' }}></i>
+						<i className='bx bx-cog' style={{ fontSize: '18px' }}></i>
 					</div>
 					<div className="profile">
 						<img src="" alt="" />
